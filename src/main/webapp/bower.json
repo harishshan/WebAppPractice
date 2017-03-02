@@ -1,0 +1,14 @@
+{
+  "name": "itpui",
+  "description": "Intelligent Text Processing User Interface",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

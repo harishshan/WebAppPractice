@@ -1,0 +1,40 @@
+<!-- form-profile.html action="uploadFile"-->
+<div ng-controller="uploadController" class="form-group">
+	<form>
+		<table>
+			<tr>
+				<td><label class="label-white">Header:</label></td>
+				<td><input type="checkbox" class="radio" ng-model="header" /></td>
+			</tr>
+			<tr>
+				<td><label class="label-white">Show Rows:</label></td>
+				<td>
+					<select ng-model="maxRowSize">
+						<option value="10">10</option>
+						<option value="25">25</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+						<option value="500">500</option>
+						<option value="1000">1000</option>
+						<option value="1000000">all</option>						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label class="label-white">File Upload:</label></td>
+				<td><input type="file" name="uploadFile" id="csv-file" class="label-white" accept=".csv" file-model="myFile"/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button ng-click="uploadFile();">upload me</button></td>
+			</tr>
+		</table>
+	</form>
+	<div ui-grid="{ data: myData, checkboxHeaderTemplate :'<input class=\'ngSelectionHeader\' type=\'checkbox\' ng-show=\'multiSelect\' ng-model=\'allSelected\' ng-change=\'toggleSelectAll(allSelected)\'/>',enablePinning: true }" class="myGrid"></div>
+</div>
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.dashboard" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>
